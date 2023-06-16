@@ -1,9 +1,15 @@
 import "./App.css";
+import { useDispatch } from "react-redux";
 import MoviePlaylist from "./components/MoviePlaylist";
 import SongPlaylist from "./components/SongPlaylist";
+import { reset } from "./store";
 
 function App() {
-  const handleResetClick = () => {};
+  const dispatch = useDispatch();
+
+  const handleResetClick = () => {
+    dispatch(reset());
+  };
 
   return (
     <div className="container is-fluid">
